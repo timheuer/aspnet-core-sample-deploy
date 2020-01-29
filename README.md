@@ -1,3 +1,5 @@
+![Build and Deploy](https://github.com/timheuer/aspnet-core-sample-deploy/workflows/Build%20and%20Deploy/badge.svg?branch=master)
+
 # ASP.NET Core Deployment with Actions Sample
 This is a sample repo that uses the basic ASP.NET Core web app template and GitHub Actions to build and deploy the web app to Azure App Service.
 
