@@ -3,6 +3,7 @@
 # To configure this workflow:
 #
 # 1. Set up a secret in your repository named AZURE_WEBAPP_PUBLISH_PROFILE with the value of your Azure publish profile.
+#    Get the publish profile from the portal: https://docs.microsoft.com/visualstudio/deployment/tutorial-import-publish-settings-azure?view=vs-2019#create-the-publish-settings-file-in-azure-app-service
 #
 # 2. Change the values for the AZURE_WEBAPP_NAME, AZURE_WEBAPP_PACKAGE_PATH and NETCORE_VERSION environment variables  (below).
 #
@@ -40,7 +41,7 @@ jobs:
       run: dotnet test --no-build
 
     - name: Publish app for deploy
-      run: dotnet publish --configuration Release --no-build --output ./published
+      run: dotnet publish --configuration Release --no-build --output ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v1
