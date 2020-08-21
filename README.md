@@ -6,7 +6,7 @@ This is a sample repo that uses the basic ASP.NET Core web app template and GitH
 This repo is really meant only to be an example of the Actions and not the ASP.NET Core content.
 
 ## What does the workflow do?
-The workflow does a few things...
+The [workflow](.github/workflows/build-and-deploy.yml) does a few things...
 
 Build:
 - Uses .NET Core SDK 
